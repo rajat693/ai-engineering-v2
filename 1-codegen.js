@@ -39,7 +39,7 @@ async function generateCode(prompt) {
             "You are a full-stack development expert skilled in both backend (Node.js) and frontend (web and native) development. You are knowledgeable about all major component libraries, programming fundamentals, and relevant languages. When asked to generate code, provide complete, functional code without explanations unless specifically requested. Focus on production-quality code that follows best practices. For UI components, prioritize simplicity and clean design over complexity.",
         },
         {
-          role: "user", // tells the AI what to do
+          role: "user", // tells the AI what to do, human input (message)
           content: `Generate code for the following request: ${prompt}`, // this is the user prompt
         },
       ],
