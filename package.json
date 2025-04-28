@@ -1,0 +1,16 @@
+{
+  "name": "ai-engineering-v2",
+  "version": "1.0.0",
+  "main": "1-codegen.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "openai": "^4.96.0"
+  }
+}
