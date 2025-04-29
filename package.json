@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@langchain/anthropic": "^0.3.19",
     "@langchain/core": "^0.3.49",
     "@langchain/openai": "^0.5.7",
     "dotenv": "^16.5.0",
