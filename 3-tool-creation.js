@@ -69,7 +69,6 @@ async function generateCode(prompt) {
 
     // Call the LLM with the messages
     const response = await llmWithTools.invoke(messages);
-    console.log("response", response);
 
     // Return the content of the response
     return response;
