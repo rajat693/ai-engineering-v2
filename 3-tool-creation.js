@@ -51,12 +51,10 @@ console.log("Generating code based on your request...");
 async function generateCode(prompt) {
   try {
     // Initialize the ChatOpenAI model with tool capabilities
-    const model = new ChatOpenAI({
+    const llm = new ChatOpenAI({
       model: "gpt-4o",
       apiKey: apiKey,
       temperature: 0.7,
-    }).bind({
-      tools: [getWeatherTool],
     });
 
     // Create messages
@@ -67,11 +65,14 @@ async function generateCode(prompt) {
       new HumanMessage(`Generate code for the following request: ${prompt}`),
     ];
 
+    const llmWithTools = llm.bindTools([getWeatherTool]);
+
     // Call the LLM with the messages
-    const response = await model.invoke(messages);
+    const response = await llmWithTools.invoke(messages);
+    console.log("response", response);
 
     // Return the content of the response
-    return response.content;
+    return response;
   } catch (error) {
     console.error("Error:", error.message);
     process.exit(1);
